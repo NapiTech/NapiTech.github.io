@@ -1,0 +1,414 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*Navbar styles*/
+header{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;
+	background: skyblue;
+}
+#map {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+body{
+	background-color: skyblue;
+}
+i{
+	cursor: pointer;
+}
+#chk1{
+	display:  none;
+}
+header .logo{
+	flex: 1;
+	color: white;
+	margin-left: 50px;
+}
+header .search-box{
+	flex: 1;
+	position: relative;
+}
+.search-box input{
+	width: 80%;
+	height: 40px;
+	border: none;
+	outline: none;
+	background: white;
+	border-radius: 10px;
+	color: gray;
+	font-size: 16px;
+	text-align: center;
+}
+.search-box button{
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	transform: scale(0.9);
+	background: white;
+}
+.search-box button:hover{
+	background-color: black;
+	color: white;
+}
+header ul{
+	flex: 2;
+	display: flex;
+	justify-content: space-evenly;
+}
+header ul li{
+	list-style: none;
+}
+header ul li a{
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 15px;
+}
+header ul li a:hover{
+	background-color: white;
+	border: 3px solid white;
+	color: black;
+	border-radius: 10px;
+}
+header .menu{
+	font-size: 2.2em;
+    display: none; 
+}
+
+
+/*Responsivness*/
+@media(max-width:1000px){
+	.search-box button{
+		position: absolute;
+	}
+	header{
+		position: fixed;
+		z-index: 10000;
+	}
+	header ul{
+		position: fixed;
+		z-index: 1000;
+		top: 100px;
+		right: -100%;
+		background: skyblue;
+		height: calc(100vh - 100px);
+		width: 50%;
+		flex-direction: column;
+		align-items: center;
+		transition: right 0.5s linear;
+		
+	}
+	header .menu{
+		display: block;
+		width: 100px;
+		text-align: center;
+	}
+	#chk1:checked ~ ul{
+		right: 0;
+	}
+} 
+
+
+
+/*Home page section stles*/
+
+.espacio{
+  height: 60px;
+}
+.section h2{
+text-align: center;
+color: White;
+margin: 100px;
+}
+
+
+
+/*Card style*/
+.container-card{
+  width: 100%;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+}
+.title-cards{
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+.card1{
+  width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 1px 10px skyblue;
+  transition: all 400ms ease-out;
+  cursor: default;
+}
+.card1:hover{
+  box-shadow: 5px 5px 20px white;
+  transform: translateY(-3%);
+}
+.card1 img{
+  width: 100%;
+  height: 210px;
+}
+.card1 .conteinaer1{
+  padding: 15px;
+  text-align: center;
+}
+.card1 .conteinaer1 h3{
+  margin-bottom: 15px;
+  color: black;
+}
+.card1 .conteinaer1 p{
+  line-height: 1.8;
+  color: black;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.add-to-cart{
+	background-color: skyblue;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+}
+.add-to-cart:hover{
+	background-color: black;
+	color: white;
+}
+
+/*Responsiveness for cards*/
+@media only screen and (min-width:320px) and (max-width:768px){
+  .container-card{
+    flex-wrap: wrap;
+  }
+  .card{
+    margin: 15px;
+  }
+
+}
+
+
+
+/*footer styles*/
+footer {
+	background-color: skyblue;
+	color: white;
+	padding: 35px 20px;
+	text-align: center;
+}
+footer ul {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+footer ul li {
+	margin-left: 20px;
+}
+footer ul li a {
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+}
+footer ul li a:hover {
+	color: black;
+}
+
+
+
+/* Modal Pop-up style */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 30000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  border-radius: 10px;
+}
+.modal h3{
+	text-align: center;
+}
+.modal p{
+	text-align: center;
+}
+.modal-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid white;
+  width: 60%;
+  border-radius: 20px;
+  background-color: white;
+}
+.button-container {
+  text-align: center;
+}
+.modalboton {
+  background-color: skyblue;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.modalboton:hover {
+  background-color: black;
+}
+
+
+
+/*Review Style*/
+main {
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+}
+.product {
+margin-bottom: 40px;
+}
+.review {
+border: 1px solid white;
+border-radius: 20px;
+padding: 20px;
+margin-bottom: 20px;
+}
+.review:hover {
+border-color: black;
+background-color: white;
+}
+.review-header {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+.review-header img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+.review-header h2 {
+margin: 0;
+}
+.contact {
+margin-bottom: 40px;
+}
+.form-group {
+margin-bottom: 20px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+}
+input,
+textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 16px;
+}
+.btn{
+background-color: black;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+.btn:hover {
+background-color: purple;
+}
+
+
+
+/* Basket syle*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: white;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+#total {
+  text-align: right;
+}
+
+.checkoutbtn {
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+#checkout-btn:hover,
+#clear-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+ 
+
+.red{
+	color: red;
+}

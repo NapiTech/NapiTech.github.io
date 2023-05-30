@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <title>Retail Camping Company</title>  
+	</head>	
+  <body>
+      <header>
+	       <input type="checkbox" id="chk1">
+		   <div class="logo"><h1>RCC</h1></div>
+		   <div class="search-box">
+		   <form>
+		   <input type="text" name="search" id="srch" placeholder="search">
+		   <button type="submit"><i class="fa fa-search"></i></button>
+		   </form>
+		   </div>
+		   <ul>
+		     <li><a href="Home.html">Home</a></li>
+			 <li><a href="Equipment.html">Equipment</a></li>
+			 <li><a href="Furniture.html">Furniture</a></li>
+			 <li><a href="Reviews.html">Reviews</a></li>
+			 <li><a href="Basket.html">Basket</a></li>
+			 <li><a href="OffersandPackages.html">Offers/Packages</a></li>
+		   </ul>
+		   <div class="menu">
+		    <label for="chk1">
+			    <i class="fa fa-bars"></i>
+			</label> 	
+	 	   </div>  	
+	  </header>
+		<div class="espacio"></div>
+	  <div class="espacio"></div>
+	
+	<main>
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Product items will be dynamically added here -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total:</td>
+            <td id="total">$0.00</td>
+            <td>
+              <button class="checkoutbtn" id="checkout-btn">Checkout</button>
+              <button class="checkoutbtn" id="clear-btn">Clear</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+	<footer>
+    <h2 class="footer contact">Contact us</h2>
+    <ul class="social-links">
+    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    </footer> 
+	</body>
+</html>
